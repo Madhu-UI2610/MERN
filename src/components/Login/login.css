@@ -1,0 +1,41 @@
+.form-group {
+    /* border: 1px solid green; */
+    /* margin: 10px; */
+    padding: 10px;
+    /* text-align: center; */
+}
+
+.form-group button {
+    width: 50%;
+    padding: 6px;
+    margin-left: 25%;
+    border-radius: 15px;
+
+}
+
+.form-group button:hover {
+    background-color: black;
+    color:white;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 6px;
+    margin-top: 10px;
+}
+
+#loginPage {
+    border: 1px solid red;
+    width: 50%;
+    margin: auto;
+    background-color: antiquewhite;
+    margin-top: 15%;
+    border-radius: 15px;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+body{
+    background-color: azure;
+}
+

@@ -1,0 +1,12 @@
+.page-not-found{
+    display:inline-block;
+}
+.space{
+    padding-left:2%;
+    font-size: 100%;
+    font-weight: bold;
+}
+.move-up{
+    padding-left: 2%;
+    font-weight: normal;
+}
