@@ -1,63 +1,112 @@
 import React from 'react';
 import './employeedetails.css';
-class Employeedetails extends React.Component{
-    render(){
-        return(
-     <div>
-         <table className="table-emplyee-border">
-         <tr>
-             <th>Name</th>
-             <td>Aurora</td>
-        </tr>
-        <tr>
-             <th>Age</th>
-             <td>53</td>
-        </tr>
-        <tr>
-             <th>Email</th>
-             <td>ante.blandit@disparturient.ca</td>
-        </tr>
-        <tr>
-             <th>Date of joining</th>
-             <td>10/06/2019</td>
-        </tr>
-        <tr>
-             <th>Phone number</th>
-             <td>1628101902299</td>
-        </tr>
-        <tr>
-             <th>Street</th>
-             <td>493 Iaculis Rd.</td>
-        </tr>
-        <tr>
-             <th>City</th>
-             <td>Lewiston</td>
-        </tr>
-        <tr>
-             <th>Zip</th>
-             <td>42591-180</td>
-        </tr>
-        <tr>
-             <th>Region</th>
-             <td>Maine</td>
-        </tr>
-        <tr>
-             <th>Country</th>
-             <td>Sudan</td>
-        </tr>
-        <tr>
-             <th>Info</th>
-             <td>est. Nunc ullamcorper, velit in aliquet lobortis, nisi nibh lacinia</td>
-        </tr>
-        <tr>
-             <th>EmployeeID</th>
-             <td>101</td>
-        </tr>
-        </table>
+import axios from 'axios';
+class Employeedetails extends React.Component {
+     state = {
+          isDataLoaded: false
+     }
+     constructor(props) {
+          super(props);
+          axios.get('http://localhost:3001/contractor/5e899c8f8075b814b044bc63').then(
+               (data) => {
+                    console.log(data);
+                    this.employee = data.data.data;
+                    this.setState({ isDataLoaded: true });
+               }
+          )
+     }
+     employee = {};
+     employeelist = () => {
+          alert("data")
+
+     }
+
+     loadData() {
+          if (this.state.isDataLoaded) {
+               return (
+                    <table className="table-emplyee-border">
+                         <tbody>
+                              <tr>
+                                   <td>Name</td>
+                                   <td>{this.employee.Name}</td>
+                              </tr>
+                              <tr>
+                                   <td>Age</td>
+                                   <td>{this.employee.Age}</td>
+                              </tr>
+                              <tr>
+                                   <td>Email</td>
+                                   <td>{this.employee.Email}</td>
+                              </tr>
+                              <tr>
+                                   <td>Date of joining</td>
+                                   <td>{this.employee["Date of joining"]}</td>
+                              </tr>
+                              <tr>
+                                   <td>Phone number</td>
+                                   <td>{this.employee["Phone number"]}</td>
+                              </tr>
+                              <tr>
+                                   <td>Street</td>
+                                   <td>{this.employee.Street}</td>
+                              </tr>
+                              <tr>
+                                   <td>City</td>
+                                   <td>{this.employee.City}</td>
+                              </tr>
+                              <tr>
+                                   <td>Zip</td>
+                                   <td>{this.employee.Zip}</td>
+                              </tr>
+                              <tr>
+                                   <td>Region</td>
+                                   <td>{this.employee.Region}</td>
+                              </tr>
+                              <tr>
+                                   <td>Country</td>
+                                   <td>{this.employee.Country}</td>
+                              </tr>
+                              <tr>
+                                   <td>Info</td>
+                                   <td>{this.employee.Info}</td>
+                              </tr>
+                              <tr>
+                                   <td>EmployeeID</td>
+                                   <td>{this.employee.EmployeeID}</td>
+                              </tr>
+                         </tbody>
+                    </table>
+               );
+          } else {
+               return <p style={{ textAlign: "center",marginTop: '100px' }}>Loading ..</p>
+          }
+     }
+
+     render() {
+          // alert('render called click ok to proceed');
+          const employeDetails = this.props.data;
+          console.log("999", employeDetails);
+          let tableData = this.loadData();
+          return (
+               <React.Fragment>
+                    <div className="table_details">
+                         <div className="personimage">
+                              <img src="cart design.jpg" alt="profile" />
+                              <p>
+                                   <button className="button-back" onClick={this.employeelist}>Back</button>
+                              </p>
+
+                         </div>
+                         <div className="brder">
+                              {tableData}
+                         </div>
+                    </div>
+               </React.Fragment>
 
 
-     </div>
-    )
-        }
+
+
+          )
+     }
 }
 export default Employeedetails;

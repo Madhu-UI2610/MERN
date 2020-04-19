@@ -1,7 +1,24 @@
 import React from 'react';
 import './login.css';
 
+
 class Login extends React.Component {
+    constructor (props) {
+        super(props);
+        this.state = {
+            show : false
+        }
+    }
+    componentDidMount(){
+        
+        console.log("aaaaa")
+    }
+    componentWillMount(){
+       
+        console.log("bbbb")
+    }
+    
+    
     render() {
         return (
             <div id="loginPage">

@@ -1,8 +1,7 @@
 import React from 'react';
-import XLSX from 'xlsx';
+//import XLSX from 'xlsx';
 import { EmpConsumer } from '../provider/provider';
-import Dummy from '../dummy/Dummy';
-import Employeedetails from '../employeedetails/employeedetails';
+
 //import Check from '../checkbox/checkbox';
 class Excel extends React.Component {
     clickMe = () => {

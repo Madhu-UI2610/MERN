@@ -1,22 +1,51 @@
-.table-emplyee-border,tr,td{
+.table-emplyee-border, tr, td {
     margin-left: 30%;
     margin-top: 23px;
     padding: 13px;
-    color:black;
-    border-bottom: 2px solid white; 
-    background-image: linear-gradient(315deg, #13547a 0%, #80d0c7 74%);
+    color: black;
+    border-bottom: 2px solid white;
+    background-image: linear-gradient(315deg, #80d0c7 0%, #80d0c7 74%);
+    
 }
+.brder{
+display: inline-block;
+}
+.table_details{
+    display: inline-block;
+}
+
 th {
     padding-left: 39px;
     padding-top: 5px;
     padding-right: 39px;
     padding-bottom: 4px;
-    border-bottom: 2px solid white; 
-    
- }
- table {
-        border-collapse: collapse;
-        border-radius: 1em;
-        overflow: hidden;
-      }
+    border-bottom: 2px solid white;
+}
 
+table {
+    border-collapse: collapse;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.personimage {
+    /* margin-right: 80%; */
+    vertical-align: top;
+    margin-top: 9%;
+    display: inline-block;
+}
+.button-back{
+    margin-top: 7%;
+    border-radius: 22px;
+    padding-right: 18px;
+    padding-left: 18px;
+    padding-top: 3px;
+    padding-bottom: 4px;
+    background-color: 1px solid green;
+    color: black;
+    background-color: springgreen;
+    border: 1px solid lawngreen;
+}
+/* .table_details {
+    display: inline-flex;
+} */
