@@ -29,6 +29,12 @@ class Header extends React.Component {
                         {/* <a href = "/Cart">Cart</a> */}
                         <Link to={'/Cart'}>Cart</Link>
                     </li>
+                    <li>
+                        <Link to={'/Pagination'}>Pagination</Link>
+                    </li>
+                    <li>
+                        <Link to={'/chart'}>chart</Link>
+                    </li>
                 </ul>
             </nav>
 

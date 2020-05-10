@@ -9,6 +9,8 @@ import Employeedetails from '../employeedetails/employeedetails';
 import Signup from '../signup/signup';
 import Pagenotfound from '../pagenotfound/pagenotfound';
  import Cart from '../cart/cart';
+import Pagination from '../pagination/pagination';
+import Chart from '../charts/charts';
 class Main extends React.Component {
     render() {
         return (
@@ -29,6 +31,8 @@ class Main extends React.Component {
                         <Route exact path="/Dummy" component={Dummy}></Route>
                         <Route exact path="/Employeedetails" component={Employeedetails}></Route>
                         <Route exact path="/Cart" component={Cart}></Route>
+                        <Route exact path="/Pagination" component={Pagination}></Route>
+                        <Route exact path="/chart" component={Chart}></Route>
                     </Switch>
                 {/* </BrowserRouter> */}
             </Providers>

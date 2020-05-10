@@ -28,7 +28,6 @@ class Cart extends React.Component {
                 //     }
                 //     return eachEmployee;
                 // })
-                console.log("massss",this.employeeArray);
                 this.originalEmployeeArray = this.employeeArray.slice();
                 this.setState({
                     isdataloaded: true
